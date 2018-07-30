@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "dependencies": {
+    "event": "^1.0.0",
+    "event-emitter": "^0.3.5",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "image-downloader": "^3.4.1",
+    "mongoose": "^5.2.3",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "puppeteer": "^1.5.0",
+    "request": "^2.87.0",
+    "sequelize": "^4.38.0",
+    "sequelize-auto": "^0.4.29",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "version": "",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
