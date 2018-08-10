@@ -25,7 +25,7 @@ const test = sequelize.define('all_link', {
         type: Sequelize.STRING
     },
     content: {
-        type: Sequelize.STRING(1000)
+        type: Sequelize.STRING
     },
     linhvuc : {
         type: Sequelize.STRING
