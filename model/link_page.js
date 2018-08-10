@@ -1,17 +1,7 @@
-const Sequelize = require("sequelize");
-const sequelize = new Sequelize('sequelize', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql',
-    operatorsAliases: false,
+const sequelize = require('../connect/connectSq')
+const Sequelize = require('sequelize')
 
-    pool: {
-        max: 5,
-        min: 0,
-        acquire: 3000000,
-        idle: 10000
-    },
 
-});
 const test = sequelize.define('all_link', {
     id: {
         primaryKey: true,

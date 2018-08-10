@@ -49,7 +49,7 @@ var controller = {
     postNew: function (req, res) {
         const { linkFB, title, content, linhvuc, mucdich, loaihinhqc } = req.body;
         try {
-            if (!linkFB || !title || !content || !linhvuc || !mucdich || !loaihinhqc) throw new Error({ message: "all fields are required!" })
+            if (!linkFB || !title || !content || !linhvuc || !mucdich || !loaihinhqc) throw new Error("all fields are required!")
             test.create({
                 linkFB: linkFB,
                 title: title,
@@ -85,7 +85,8 @@ var controller = {
             }
             else {
                 try {
-                    if (!linkFB && !title && !content && !linhvuc && !mucdich && !loaihinhqc) throw new Error("at least 1 row to update!");
+                    if (!linkFB && !title && !content && !linhvuc && !mucdich && !loaihinhqc) 
+                    throw new Error("at least 1 row to update!");
                     test.update({
                         linkFB: linkFB,
                         title: title,
@@ -136,8 +137,9 @@ var controller = {
                         id: req_id,
                     }
                 }).then(() => {
-                    res.send({
-                        message: "deleted"
+                    res.json({
+                        success: true,
+                        message: "deleted!"
                     })
                 })
             }
