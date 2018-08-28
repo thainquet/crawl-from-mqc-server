@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="Getdetail()">
+        Get detail
+    </button>
+    <table id="result" style="width:50%"">
+
+    </table>
+    <script>
+        let Getdetail = () => {
+            fetch('http://localhost:7555/ads/2', {
+                    mode: "no-cors"
+                })
+                .then(res => {
+                    return res.json()
+                })
+                .then((res) => {
+                    console.log(res.data)
+                    let re = `<tr><th>ID</th><th>Content</th></tr>`
+                    re = re += `<tr><th>${res.data.id}</th><th>${res.data.content}</th></tr>`
+                    document.getElementById("result").innerHTML = re
+                })
+        }
+    </script>
+</body>
+
+</html>
